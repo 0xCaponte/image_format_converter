@@ -4,7 +4,7 @@ build-backend = "poetry.core.masonry.api"
 
 [tool.poetry]
 name = "image_format_converter"
-version = "0.1"
+version = "0.1.1"
 description = "A lightweight Python package that converts images in a directory from one format to another while preserving their dimensions."
 authors = ["Carlos Aponte <carlos@caponte.io>"]
 readme = "README.md"
