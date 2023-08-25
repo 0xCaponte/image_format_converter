@@ -26,8 +26,11 @@ def test_preserve_image_dimensions():
 
 
 def test_recursivity():
-    convert_images_in_directory(TEST_DIR, "png", "jpg", OUTPUT_DIR, recursive=True)
-    assert os.path.exists(os.path.join(OUTPUT_DIR, "subfolder/sample.jpg"))
+    convert_images_in_directory(TEST_DIR, "png", "jpg", recursive=True)
+
+    assert os.path.exists(os.path.join(TEST_DIR, "subfolder/sample.jpg"))
+    assert os.path.exists(os.path.join(TEST_DIR, "subfolder/subfolder2/sample.jpg"))
+    assert os.path.exists(os.path.join(TEST_DIR, "subfolder/subfolder2/subfolder3/sample.jpg"))
 
 
 def test_overwrite():

@@ -123,7 +123,7 @@ def convert_images_in_directory(directory: str, input_format: str, output_format
 
                 else:
                     relative_path = os.path.relpath(root, directory)
-                    output_subdirectory = os.path.join(output_directory or root, relative_path)
+                    output_subdirectory = os.path.join(output_directory or directory, relative_path)
                     output_file_path = os.path.join(output_subdirectory, file[:-len(input_format)] + output_format)
 
                     # Create output path if needed
